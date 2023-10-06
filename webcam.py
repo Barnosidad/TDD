@@ -12,7 +12,7 @@ def show_webcam():
         # Apliquemos transformaciones de intensidad (operaciones aritméticas)
         Im1neg = cv2.bitwise_not(img_gray)
         # gradiente horizontal
-        img_gradiente = mylib.gradiente_horizontal(img_gray)
+        img_gradiente = mylib.filtrado_local(img_gray)
 
         cv2.imshow('my webcam', img_gradiente)
         if cv2.waitKey(1) == 27:
